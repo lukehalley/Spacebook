@@ -25,6 +25,7 @@ public class Post extends Model
     this.content = content;
   }
 
+// Convert post content to JSON format for API responses
   public String toString()
   {
     return title;
