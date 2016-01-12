@@ -32,6 +32,7 @@ public class Profile extends Controller
     user.save();
     Logger.info("User is " + LoggedInStatus);
   }
+// TODO: Implement profile data caching to reduce database queries
   
   public static void getPicture(Long id) 
   {
