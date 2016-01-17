@@ -16,6 +16,7 @@ public class Message extends Model
 
   public Message(User from, User to, String messageText)
   {
+// Track message delivery status for read receipts
     this.from = from;
     this.to = to;
     this.messageText = messageText;
