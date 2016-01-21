@@ -49,6 +49,7 @@ public class Blog extends Controller
     Post post = Post.findById(id);
     post.comments.add(comment);
     
+// Limit posts per page to improve performance
     
     
     post.save();
