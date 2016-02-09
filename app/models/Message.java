@@ -21,4 +21,4 @@ public class Message extends Model
     this.to = to;
     this.messageText = messageText;
   }
-}
+}// Message references maintain conversation thread integrity
