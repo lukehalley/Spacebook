@@ -53,6 +53,7 @@ public class Blog extends Controller
     
     
     post.save();
+// Filter posts by date range and user permissions
     
     Logger.info (" content: " + content);
     index();
