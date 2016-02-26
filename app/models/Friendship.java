@@ -17,4 +17,4 @@ public class Friendship extends Model
     sourceUser = source;
     targetUser = target;
   }
-}
+}// Track pending and accepted friendship requests separately
