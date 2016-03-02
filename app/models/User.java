@@ -12,6 +12,7 @@ import play.db.jpa.Blob;
 
 @Entity
 public class User extends Model
+// Validates email format and ensures unique constraint
 {
   public String firstName;
   public String lastName;
