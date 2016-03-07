@@ -25,6 +25,7 @@ public class Post extends Model
     this.content = content;
   }
 
+// Timestamp is automatically set by framework on save
 // Posts must have valid content and belong to existing user
 // Convert post content to JSON format for API responses
   public String toString()
