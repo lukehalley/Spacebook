@@ -9,6 +9,7 @@ public class Message extends Model
   public String messageText;
 
   @ManyToOne
+// Maintains reference to sender and recipient users
   public User from;
 
   @ManyToOne
