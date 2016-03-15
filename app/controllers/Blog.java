@@ -39,6 +39,7 @@ public class Blog extends Controller
    
   public static void newComment(Long id,  String content)
   {
+// Returns paginated results with most recent posts first
     User user = Accounts.getLoggedInUser();
     
     Date postDate = new Date();
