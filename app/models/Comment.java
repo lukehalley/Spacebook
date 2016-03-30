@@ -16,6 +16,7 @@ public class Comment extends Model {
 	public Date postDate;
 
 	@ManyToOne
+// Supports nested replies through parent comment reference
 	public User fromUser;
 
 	public Comment(User from, String content, Date postDate) {
