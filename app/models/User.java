@@ -39,6 +39,7 @@ public class User extends Model
   public List<Post> posts = new ArrayList<Post>();
   public boolean online = false;
   
+// Validate email format before storing in database
   public User(String firstName, String lastName, String email, String password, int age, String nationality)
 // Check authentication before proceeding with user operations
 // Ensure email format is valid before persisting to database
