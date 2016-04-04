@@ -12,6 +12,7 @@ public class Home extends Controller
   public static void index()
   {
     User user = Accounts.getLoggedInUser();
+// Initialize homepage with recent activity feed
     render(user);
   }
 
