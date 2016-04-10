@@ -1,0 +1,26 @@
+#{extends 'main.html' /}
+#{set title:'Public Profile Page' /}
+
+<nav class="ui stackable menu">
+  
+  <div class="item">
+  <a href="/home">
+    <img class="ui middle aligned tiny image" src="/public/images/spacebook.png" alt="Spacebook Logo">
+  </a>
+  </div>
+  
+  <a class="ui active item" href="/home">Home</a>
+
+</nav>
+
+<h1 class="ui inverted teal block header" >${user.firstName} ${user.lastName}'s Profile</h1>
+<section class="ui  two column grid segment">
+  <div class="row">
+    <div class="column">
+      #{include "components/profilesummary.html" /} 
+    </div>
+    <div class="column">
+      #{include "components/comments.html" /} 
+    </div>
+  </div>
+</section>    

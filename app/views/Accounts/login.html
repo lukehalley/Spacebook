@@ -1,0 +1,35 @@
+#{extends 'main.html' /}
+#{set title:'Login to Spacebook' /}
+
+<nav class="ui stackable menu">
+  
+  <div class="item">
+  <a href="/home">
+    <img class="ui middle aligned small image" src="/public/images/spacebook.png" alt="Spacebook Logo">
+  </a>
+  </div>
+  
+  <a class="ui item" href="/signup"> Signup</a>
+
+  <a class="ui item" href="/login"> Login</a>
+
+</nav>
+
+<section class="ui two column middle aligned grid raised form segment">
+  <div class="column">
+	  <form action="/authenticate" method="POST">
+	    <div class="field">
+	      <label> Username: </label>
+	      <input type="text" name="email">
+	    </div>  
+	    <div class="field">
+	      <label>  Password: </label>
+	      <input type="password" name="password">
+	    </div>
+	    <button class="ui blue submit button">Login</button>
+	  </form>
+  </div>
+  <div class="column">
+    <img src="/public/images/simpsons1.gif" class="ui large image">
+  </div>
+</section>

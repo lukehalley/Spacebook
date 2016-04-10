@@ -1,0 +1,27 @@
+<h2>
+	<i class="smile icon"></i> Friends
+</h2>
+
+<h3 class="ui header">You have ${user.friendships.size()} friend(s)
+	they are:</h3>
+
+
+<div class="ui middle aligned divided animated list">
+	#{list items:user.friendships, as:'friendship'}
+
+	<div class="item">
+
+		<div class="right floated content">
+
+			<a href="/home/drop/${friendship.targetUser.id}">
+				<button class="small ui red button">Drop</button>
+			</a>
+		</div>
+
+		<img class="ui avatar image"
+			src="/public/images/${friendship.targetUser.firstName}.gif"> <a
+			
+			href="/publicprofile/${friendship.targetUser.id}"> ${friendship.targetUser.firstName} ${friendship.targetUser.lastName}</a>
+	</div>
+	#{/list}
+</div>

@@ -1,0 +1,80 @@
+User(homer):
+    firstName: Homer
+    lastName: Simpson
+    age: 34
+    nationality: American
+    email: homer@simpson.com
+    password: secret
+    profilePicture: href="../public/images/homer.gif"
+
+User(marge):
+    firstName: Marge
+    lastName: Simpson
+    age: 28
+    nationality: American    
+    email: marge@simpson.com
+    password: secret
+
+User(bart):
+    firstName: Bart
+    lastName: Simpson
+    age: 12
+    nationality: American    
+    email: bart@simpson.com
+    password: secret
+
+User(lisa):
+    firstName: Lisa
+    lastName: Simpson
+    age: 11
+    nationality: American
+    email: lisa@simpson.com
+    password: secret
+
+User(grandpa):
+    firstName: Grandpa
+    lastName: Simpson
+    age: 74
+    nationality: American
+    email: grandpa@simpson.com
+    password: secret
+
+User(ned):
+    firstName: Ned
+    lastName:  Flanders
+    age: 34
+    nationality: American
+    email: ned@simpson.com
+    password: secret
+
+User(barney):
+    firstName: Barney
+    lastName:  Gumble
+    age: 45
+    nationality: American
+    email: barney@simpson.com
+    password: secret
+
+User(ralph):
+    firstName: Ralph
+    lastName: Wiggum
+    age: 8
+    nationality: American
+    email: ralph@simpson.com
+    password: secret
+
+User(troy):
+    firstName: Troy
+    lastName: McClure
+    age: 37
+    nationality: American
+    email: troy@simpson.com
+    password: secret
+
+User(kent):
+    firstName: Kent
+    lastName: Brockman
+    age: 20
+    nationality: American
+    email: kent@simpson.com
+    password: secret

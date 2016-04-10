@@ -1,0 +1,26 @@
+<h2>
+	<i class="mail outline icon"></i> Inbox
+</h2>
+#{list items:user.inbox, as:'message'}
+
+<table class="ui inverted blue table">
+	<thead>
+		<tr>
+			<th>Sender</th>
+
+			<th>Subject</th>
+
+			<th>Message</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr>
+			<td>${message.from.firstName}</td>
+
+			<td>${message.messageText}</td>
+		</tr>
+	</tbody>
+
+</table>
+#{/list}

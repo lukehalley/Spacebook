@@ -1,0 +1,36 @@
+#{extends 'main.html' /} #{set title:'Profile' /}
+
+<nav class="ui stackable menu">
+
+	<div class="item">
+		<a href="/home"> <img class="ui middle aligned tiny image"
+			src="/public/images/spacebook.png" alt="Spacebook Logo">
+		</a>
+	</div>
+
+	<a class="ui item" href="/home">Home</a> <a class="ui item"
+		href="/members">Members</a> <a class="ui active item" href="/profile">Profile</a>
+
+	<a class="ui item" href="/blog">Blog</a>
+
+	<div class="right menu">
+
+		<a class="ui item" href="/editprofile">Account Settings</a> 
+		<a class="ui item" href="/login">Logout</a>
+
+	</div>
+
+</nav>
+
+<h2 class="ui header">
+	<i class="child icon"></i> ${user.firstName} ${user.lastName}'s Profile
+</h2>
+
+<section class="ui  two column grid segment">
+	<div class="row">
+		<div class="column">#{include "components/profileimages.html" /}
+		</div>
+		<div class="column">#{include "components/statusupdate.html" /}
+		</div>
+	</div>
+</section>

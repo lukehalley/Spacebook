@@ -1,0 +1,26 @@
+#{extends 'main.html' /} 
+#{set title:'Members' /} 
+
+<nav class="ui stackable menu">
+  
+  <div class="item">
+  <a href="/home">
+    <img class="ui middle aligned tiny image" src="/public/images/spacebook.png" alt="Spacebook Logo">
+  </a>
+  </div>
+  
+  <a class="ui item" href="/home">Home</a>
+
+  <a class="ui active item" href="/members">Members</a>
+
+  <a class="ui item" href="/profile">Profile</a>
+  
+  <a class="ui item" href="/blog">Blog</a>
+
+  <div class="right menu">
+		<a class="ui item" href="/login">Logout</a>
+  </div>
+
+</nav>
+
+#{include "components/members.html" /} 

@@ -1,0 +1,39 @@
+#{extends 'main.html' /} #{set title:'Home' /}
+
+<nav class="ui stackable menu">
+
+	<div class="item">
+		<a href="/home"> <img class="ui middle aligned tiny image"
+			src="/public/images/spacebook.png" alt="Spacebook Logo">
+		</a>
+	</div>
+
+	<a class="ui active item" href="/home">Home</a> <a class="ui item"
+		href="/members">Members</a> <a class="ui item" href="/profile">Profile</a>
+
+	<a class="ui item" href="/blog">Blog</a>
+
+	<div class="right menu">
+
+		<a class="ui item" href="/login">Logout</a>
+
+	</div>
+
+</nav>
+
+<h2 class="ui header">
+	<i class="home icon"></i> Home page for ${user.firstName} ${user.lastName}
+</h2>
+
+#{include "components/statusupdate.html" /}
+
+
+
+<section class="ui two column grid segment">
+	<div class="row">
+		<div class="ui column">#{include "components/friends.html" /}</div>
+		<div class="ui column">#{include "components/messages.html" /}</div>
+	</div>
+</section>
+
+#{include "components/profileimageshome.html" /}

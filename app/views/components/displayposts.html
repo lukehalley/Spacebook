@@ -1,0 +1,9 @@
+<section class="ui segment">
+  <h4 class="ui  blue block header">Published Posts</h4>
+  #{list items:user.posts, as:'post'}
+    <h5 class="ui  blue block header"> ${post.title}</h5>
+    <p> 
+      ${post.content}:
+    </p>
+  #{/list}
+</section>

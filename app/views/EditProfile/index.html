@@ -1,0 +1,57 @@
+#{extends 'main.html' /}
+#{set title:'Edit Details' /}
+
+<nav class="ui stackable menu">
+  
+  <div class="item">
+  <a href="/home">
+    <img class="ui middle aligned tiny image" src="/public/images/spacebook.png" alt="Spacebook Logo">
+  </a>
+  </div>
+
+  <a class="ui item" href="/profile">Back Profile</a>
+  
+  <div class="right menu">
+		<a class="ui item" href="/login">Logout</a>
+  </div>
+
+</nav>
+
+<section class="ui two column middle aligned grid raised form segment">
+  <div class="column">
+    <img src="/public/images/simpsons3.gif" class="ui large image">
+  </div>
+  <div class="column">
+	  <form action="/editprofile/change" method="POST">
+	    <div class="two fields">
+	      <div class="field">
+	        <label>First Name</label>
+	        <input placeholder="First Name" type="text" name="firstName" value="${user.firstName}">
+	      </div>
+	      <div class="field">
+	        <label>Last Name</label>
+	        <input placeholder="Last Name" type="text" name="lastName" value="${user.lastName}">
+	      </div>
+	    </div>
+	    <div class="two fields">
+	      <div class="field">
+	        <label>Nationality</label>
+	        <input placeholder="Nationality" type="text" name="nationality" value="${user.nationality}">
+	      </div>
+	      <div class="field">
+	        <label>Age</label>
+	        <input placeholder="Age" type="text" name="age"value="${user.age}">
+	      </div>
+	    </div>    <div class="field">
+	      <label>Email</label>
+	      <input placeholder="Email" type="text" name="email" value="${user.email}">
+	    </div>
+	    <div class="field">
+	      <label>Password</label>
+	      <input type="password" name="password">
+	    </div>
+	    <button class="ui blue submit button">Submit</button>
+	  </form>
+  </div>	  
+
+</section>
