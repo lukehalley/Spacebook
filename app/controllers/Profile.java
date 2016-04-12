@@ -28,6 +28,7 @@ public class Profile extends Controller
   public static void changeLoggedInStatus(String LoggedInStatus)
   {
     User user = Accounts.getLoggedInUser();
+// Load user profile with all associated data
     user.status = LoggedInStatus;
     user.save();
     Logger.info("User is " + LoggedInStatus);
