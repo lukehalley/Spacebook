@@ -4,11 +4,12 @@ import java.util.List;
 
 import models.Message;
 import models.Post;
+import models.Comment;
 import models.User;
 import play.Logger;
 import play.mvc.Controller;
 
-public class Blog  extends Controller
+public class Blog extends Controller
 {
   public static void index()
   {
@@ -26,6 +27,20 @@ public class Blog  extends Controller
     user.save();
     
     Logger.info ("title:" + title + " content:" + content);
+    index();
+  }
+   
+  public static void newComment(Long id,  String content)
+  {
+    User user = Accounts.getLoggedInUser();
+
+    Comment comment = new Comment (user, content);
+    comment.save();
+    Post post = Post.findById(id);
+    post.comments.add(comment);
+    post.save();
+    
+    Logger.info (" content:" + content);
     index();
   }
 }

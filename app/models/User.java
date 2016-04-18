@@ -35,7 +35,7 @@ public class User extends Model
   
   @OneToMany
   public List<Post> posts = new ArrayList<Post>();
-  
+  public boolean online = false;
   
   public User(String firstName, String lastName, String email, String password, String status, int age, String nationality)
   {

@@ -44,7 +44,7 @@ public class Accounts extends Controller
     return user;
   }
   
-  public static void register(String firstName, String lastName, int age, String nationality, String email, String password)
+  public static void register(String firstName, String lastName, int age, String nationality, String email, String password, String online)
   {
     Logger.info(firstName + " " + lastName + " " + email + " " + password);
     User user = new User(firstName, lastName, email, password, password, age, nationality);
@@ -63,6 +63,7 @@ public class Accounts extends Controller
       session.put("logged_in_userid", user.id);
       session.put("logged_in_status", user.status);
       Home.index();
+      user.online = true;
     }
     else
     {

@@ -6,6 +6,7 @@ User(homer):
     email: homer@simpson.com
     password: secret
     profilePicture: href="../public/images/homer.gif"
+    online: offline
 
 User(marge):
     firstName: Marge
@@ -14,6 +15,8 @@ User(marge):
     nationality: American    
     email: marge@simpson.com
     password: secret
+    online: offline
+
 
 User(bart):
     firstName: Bart
@@ -22,6 +25,7 @@ User(bart):
     nationality: American    
     email: bart@simpson.com
     password: secret
+    online: offline
 
 User(lisa):
     firstName: Lisa
@@ -30,6 +34,7 @@ User(lisa):
     nationality: American
     email: lisa@simpson.com
     password: secret
+    online: offline
 
 User(grandpa):
     firstName: Grandpa
@@ -38,6 +43,7 @@ User(grandpa):
     nationality: American
     email: grandpa@simpson.com
     password: secret
+    online: offline
 
 User(ned):
     firstName: Ned
@@ -46,6 +52,7 @@ User(ned):
     nationality: American
     email: ned@simpson.com
     password: secret
+    online: offline
 
 User(barney):
     firstName: Barney
@@ -54,6 +61,7 @@ User(barney):
     nationality: American
     email: barney@simpson.com
     password: secret
+    online: offline
 
 User(ralph):
     firstName: Ralph
@@ -62,6 +70,7 @@ User(ralph):
     nationality: American
     email: ralph@simpson.com
     password: secret
+    online: offline
 
 User(troy):
     firstName: Troy
@@ -70,6 +79,7 @@ User(troy):
     nationality: American
     email: troy@simpson.com
     password: secret
+    online: offline
 
 User(kent):
     firstName: Kent
@@ -78,3 +88,5 @@ User(kent):
     nationality: American
     email: kent@simpson.com
     password: secret
+    online: offline
+    

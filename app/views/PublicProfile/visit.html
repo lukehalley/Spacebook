@@ -1,26 +1,96 @@
-#{extends 'main.html' /}
-#{set title:'Public Profile Page' /}
+<!DOCTYPE html>
+<html>
 
-<nav class="ui stackable menu">
-  
-  <div class="item">
-  <a href="/home">
-    <img class="ui middle aligned tiny image" src="/public/images/spacebook.png" alt="Spacebook Logo">
-  </a>
-  </div>
-  
-  <a class="ui active item" href="/home">Home</a>
+<body>
+	#{extends 'main.html' /} #{set title:'Spacebook' /}
 
-</nav>
+	<nav class="ui stackable menu">
 
-<h1 class="ui inverted teal block header" >${user.firstName} ${user.lastName}'s Profile</h1>
-<section class="ui  two column grid segment">
-  <div class="row">
-    <div class="column">
-      #{include "components/profilesummary.html" /} 
-    </div>
-    <div class="column">
-      #{include "components/comments.html" /} 
-    </div>
-  </div>
-</section>    
+		<div class="item">
+			<a href="/home"> <img class="ui middle aligned small image"
+				src="/public/images/spacebook.png" alt="Spacebook Logo">
+			</a>
+		</div>
+
+		<a class="ui item" href="/home">Return Home</a>
+
+		<div class="right menu">
+			<a class="ui item" href="/login">Logout</a>
+		</div>
+
+	</nav>
+
+	<section class="ui raised segment">
+		<div class="ui small header">${user.firstName}
+			${user.lastName}'s Profile</div>
+
+		<section class="ui two column grid segment">
+			<div class="row">
+				<div class="column">
+					<div class="ui medium image">
+						<img src="/public/images/${user.firstName}.gif">
+					</div>
+
+					<h2 class="ui header">Send a message to ${user.firstName}
+						${user.lastName}</h2>
+
+					<form action="/publicprofile/sendmessage/${user.id}"
+						class="ui form" method="post">
+
+						<div class="field">
+							<label> Subject </label>
+							<textarea name="messageSubject" rows="1">
+    						</textarea>
+						</div>
+
+						<div class="field">
+							<label> Message </label>
+							<textarea name="messageText"></textarea>
+						</div>
+
+						<button class="ui fluid blue labeled submit icon button">
+							<i class="icon edit"> </i> Send
+
+						</button>
+
+					</form>
+
+
+					<p>${user.statusText}</p>
+				</div>
+
+
+				<div class="column">
+					<h2>Messages</h2>
+					#{list items:user.inbox, as:'message'}
+
+					<table class="ui table">
+						<thead>
+							<tr>
+								<th>Recipient</th>
+
+								<th>Subject</th>
+
+								<th>Message</th>
+							</tr>
+						</thead>
+
+
+						<tbody>
+							<tr>
+								<td><a href="/publicprofile/1}">${user.firstName}
+										${user.lastName}</a></td>
+
+
+								<td>${message.messageText}</td>
+							</tr>
+						</tbody>
+
+					</table>
+					#{/list}
+				</div>
+			</div>
+		</section>
+	</section>
+</body>
+</html>

@@ -25,8 +25,17 @@
 	<i class="home icon"></i> Home page for ${user.firstName} ${user.lastName}
 </h2>
 
-#{include "components/statusupdate.html" /}
+<section class="ui two column grid segment">
 
+	<div class="column">
+		<div class="ui column">#{include "components/statusupdate.html" /}</div>
+	</div>
+	
+	<div class="column">
+		<div class="ui column">#{include "components/profileimageshome.html" /}</div>
+	</div>
+	
+</section>
 
 
 <section class="ui two column grid segment">
@@ -36,4 +45,4 @@
 	</div>
 </section>
 
-#{include "components/profileimageshome.html" /}
+
