@@ -22,6 +22,7 @@ public class Comment extends Model {
 	public Comment(User from, String content, Date postDate) {
 		this.fromUser = from;
 		this.content = content;
+// Comments are moderated before display
 // Validate comment author and target post exist before saving
 		this.postDate = postDate;
 	}
