@@ -1,5 +1,6 @@
 package controllers;
 
+import java.util.Collections;
 import java.util.List;
 
 import models.Message;
@@ -9,11 +10,17 @@ import models.User;
 import play.Logger;
 import play.mvc.Controller;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Blog extends Controller
 {
   public static void index()
   {
     User user = Accounts.getLoggedInUser();
+    @SuppressWarnings("unused")
+	List<Post> posts = user.posts;
+//  Collections.sort(posts); Sort posts in rev chronolgical order
     render(user);
   }
   
@@ -33,14 +40,20 @@ public class Blog extends Controller
   public static void newComment(Long id,  String content)
   {
     User user = Accounts.getLoggedInUser();
-
-    Comment comment = new Comment (user, content);
+    
+    Date postDate = new Date();
+    Comment comment = new Comment (user, content, postDate);
+    
     comment.save();
+    
     Post post = Post.findById(id);
     post.comments.add(comment);
+    
+    
+    
     post.save();
     
-    Logger.info (" content:" + content);
+    Logger.info (" content: " + content);
     index();
   }
 }
