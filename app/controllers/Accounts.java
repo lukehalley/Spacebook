@@ -21,7 +21,6 @@ public class Accounts extends Controller {
 		user.online = false;
 		user.save();
 		session.clear();
-
 		index();
 	}
 
@@ -58,9 +57,9 @@ public class Accounts extends Controller {
 			Logger.info("Authentication successful");
 			session.put("logged_in_userid", user.id);
 			session.put("logged_in_status", user.status);
-			Home.index();
 			user.online = true;
 			user.save();
+			Home.index();
 		} else {
 			Logger.info("Authentication failed");
 			login();
