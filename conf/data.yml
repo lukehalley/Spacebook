@@ -17,7 +17,6 @@ User(marge):
     password: secret
     online: offline
 
-
 User(bart):
     firstName: Bart
     lastName: Simpson
@@ -89,4 +88,56 @@ User(kent):
     email: kent@simpson.com
     password: secret
     online: offline
-    
+
+    # Messages
+
+Message(message1):
+    from: marge
+    to: homer
+    messageText: 'Hey!'
+
+Message(message2):
+    from: bart
+    to: lisa
+    messageText: 'How are you?'
+
+Message(message3):
+    from : kent
+    to : troy
+    messageText: 'Where do you live?'
+
+Message(message4):
+    from : ralph
+    to : barney
+    messageText: 'Whats your age?'
+
+    # Friendships
+
+Friendship(friend1):
+    sourceUser: homer
+    targetUser: marge
+
+    Friendship(friend2):
+    sourceUser: homer
+    targetUser: lisa
+
+Friendship(friend3):
+    sourceUser: marge
+    targetUser: homer
+
+User(homer):
+    firstName: Homer
+    lastName: Simpson
+    email: homer@simpson.com
+    password: secret
+    friendships:
+                - friend1
+                - friend2
+
+User(marge):
+    firstName: Marge
+    lastName: Simpson
+    email: marge@simpson.com
+    password: secret
+    friendships:
+                - friend3

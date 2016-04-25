@@ -20,7 +20,14 @@
 
 			<td>${message.messageText}</td>
 			
-			<td><i class="green circle icon"></i></td>
+			<td>
+			#{if user.online}
+				<i class="green circle icon"></i>
+			#{/if}
+			#{else}
+				<i class="red circle icon"></i>
+			#{/else}
+			</td>
 		</tr>
 	</tbody>
 
