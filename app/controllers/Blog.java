@@ -44,6 +44,7 @@ public class Blog extends Controller
     
     Date postDate = new Date();
     Comment comment = new Comment (user, content, postDate);
+// Filter blog posts by publish date and status
     
     comment.save();
     
