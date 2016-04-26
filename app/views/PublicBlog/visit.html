@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	#{extends 'main.html' /} #{set title:'Spacebook' /}
+
+	<nav class="ui stackable menu">
+
+		<div class="item">
+			<a href="/home"> <img class="ui middle aligned small image"
+				src="/public/images/spacebook.png" alt="Spacebook Logo">
+			</a>
+		</div>
+
+		<a class="ui item" href="/home">Return Home</a>
+
+		<div class="right menu">
+			<a class="ui item" href="/login">Logout</a>
+		</div>
+
+
+	</nav>
+
+	<section class="ui segment">
+		<h4 class="ui  blue block header">Published Posts</h4>
+		#{list items:user.posts, as:'post'}
+		<h5 class="ui  blue block header">${post.title}</h5>
+		<p>${post.content}:</p>
+
+		<section class="ui segment">
+			#{list items:post.comments, as:'comment'}
+			<p>
+				${user.firstName} ${user.lastName} - <b>${comment.content}</b> <i>
+					( ${comment.postDate.format('dd MMMM yyyy')} ) </i>
+			</p>
+
+			#{/list}
+		</section>
+
+		#{/list}
+
+	</section>
+
+</body>
+</html>
