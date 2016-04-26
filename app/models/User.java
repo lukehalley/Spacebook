@@ -36,15 +36,15 @@ public class User extends Model
   
   @OneToMany
   public List<Post> posts = new ArrayList<Post>();
+  public List<Comment> comment = new ArrayList<Comment>();
   public boolean online = false;
   
-  public User(String firstName, String lastName, String email, String password, String status, int age, String nationality)
+  public User(String firstName, String lastName, String email, String password, int age, String nationality)
   {
     this.firstName = firstName;
     this.lastName = lastName;
     this.email = email;
     this.password = password;
-    this.status = status;
     this.age = age;
     this.nationality = nationality;
   }

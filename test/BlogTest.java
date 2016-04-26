@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import models.Comment;
 import models.Message;
 import models.Post;
 import models.User;
@@ -17,6 +18,8 @@ public class BlogTest extends UnitTest
 {
   private User bob;
   private Post post1, post2;
+private Comment comment1;
+private Comment comment2;
 
   @BeforeClass
   public static void loadDB()
@@ -24,16 +27,16 @@ public class BlogTest extends UnitTest
     Fixtures.deleteAllModels();
   }
 
-//  @Before
-//  public void setup()
-//  {
-//    bob   = new User("bob", "jones", "bob@jones.com", "secret", 20, "irish");
-//    post1 = new Post("Post Title 1", "This is the first post content");
-//    post2 = new Post("Post Title 2", "This is the second post content");
-//    bob.save();
-//    post1.save();
-//    post2.save();
-//  }
+  @Before
+  public void setup()
+  {
+    bob   = new User("bob", "jones", "bob@jones.com", "secret", 20, "irish");
+    post1 = new Post("Post Title 1", "This is the first post content");
+    post2 = new Post("Post Title 2", "This is the second post content");
+    bob.save();
+    post1.save();
+    post2.save();
+  }
 
   @After
   public void teardown()
@@ -94,5 +97,57 @@ public class BlogTest extends UnitTest
     
     User anotherUser = User.findByEmail("bob@jones.com");
     assertEquals(0, anotherUser.posts.size());   
+   }  
+  
+
+  
+  @Test
+  public void testCreateComment()
+  {
+    bob.comment.add(comment1);
+    bob.save();
+
+    User user = User.findByEmail("bob@jones.com");
+    List<Comment> comments = user.comment;
+    assertEquals(1, comments.size());
+    Comment comment = comments.get(0);
+    assertEquals(comment.content, "This is the first comment content");
+  }
+
+  @Test
+  public void testCreateMultipleComments()
+  {
+    bob.comment.add(comment1);
+    bob.comment.add(comment2);
+    bob.save();
+
+    User user = User.findByEmail("bob@jones.com");
+    List<Comment> comments = user.comment;
+    assertEquals(2, comments.size());
+    Comment commenta = comments.get(0);
+    assertEquals(commenta.content, "This is the first comment content");
+
+    Comment commentb = comments.get(1);
+    assertEquals(commentb.content, "This is the second comment content");
+  }
+  
+  @Test
+  public void testDeleteComment()
+  {
+    Comment comment3 = new Comment(bob, "This is the third comment content", null);
+    comment3.save();
+    bob.comment.add(comment3);
+    bob.save();
+    
+    User user = User.findByEmail("bob@jones.com");
+    assertEquals(1, user.comment.size());  
+    Comment comment = user.comment.get(0);
+
+    user.comment.remove(0);
+    user.save();
+    comment.delete();
+    
+    User anotherUser = User.findByEmail("bob@jones.com");
+    assertEquals(0, anotherUser.comment.size());   
    }  
 }
