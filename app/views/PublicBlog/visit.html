@@ -22,10 +22,10 @@
 	</nav>
 
 	<section class="ui segment">
-		<h4 class="ui  blue block header">Published Posts</h4>
+		<h4 class="ui  blue block header">${user.firstName}'s Blogs</h4>
 		#{list items:user.posts, as:'post'}
 		<h5 class="ui  blue block header">${post.title}</h5>
-		<p>${post.content}:</p>
+		<p>${post.content}</p>
 
 		<section class="ui segment">
 			#{list items:post.comments, as:'comment'}
