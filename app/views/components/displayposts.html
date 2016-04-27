@@ -8,7 +8,7 @@
 	<section class="ui segment">
 		#{list items:post.comments, as:'comment'}
 		<p>
-			${user.firstName} ${user.lastName} - <b>${comment.content}</b> <i> ( ${comment.postDate.format('dd MMMM yyyy')} )  </i>
+			${comment.fromUser.firstName} ${comment.fromUser.lastName} - <b>${comment.content}</b> <i> ( ${comment.postDate.format('dd MMMM yyyy')} )  </i>
 		</p>
 
 		#{/list}
