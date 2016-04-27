@@ -10,10 +10,10 @@
 		<p>
 			${comment.fromUser.firstName} ${comment.fromUser.lastName} - <b>${comment.content}</b> <i> ( ${comment.postDate.format('dd MMMM yyyy')} )  </i>
 		</p>
-
 		#{/list}
 	</section>
 
+	#{if message.from.online}
 	<section class="ui form segment">
 		<h4 class="ui  blue block header">Reply to this Post</h4>
 		<form action="/blog/newcomment/${post.id}" method="POST">
@@ -25,6 +25,12 @@
 			</button>
 		</form>
 	</section>
+	#{/if}
+
+	#{else}
+		<h4 class="ui  blue block header">Please log in to reply</h4>
+	#{/else}
+	
 	#{/list}
 
 </section>

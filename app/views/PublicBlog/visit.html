@@ -36,8 +36,20 @@
 
 			#{/list}
 		</section>
-		#{/list}
 
+		<section class="ui form segment">
+			<h4 class="ui  blue block header">Reply to this Post</h4>
+			<form action="/blog/newcomment/${post.id}" method="POST">
+				<div class="field">
+					<textarea name="content" placeholder="Comment"></textarea>
+				</div>
+				<button class="ui button blue submit labeled icon">
+					<i class="icon edit"></i> Reply
+				</button>
+			</form>
+		</section>
+
+		#{/list}
 	</section>
 
 
