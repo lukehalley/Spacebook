@@ -15,21 +15,29 @@
 
 </nav>
 
-<section class="ui two column middle aligned grid raised form segment">
+<section class="ui middle aligned grid raised form segment">
+
   <div class="column">
 	  <form action="/authenticate" method="POST">
+	  
 	    <div class="field">
 	      <label> Username: </label>
 	      <input type="text" name="email">
 	    </div>  
+	    
 	    <div class="field">
 	      <label>  Password: </label>
 	      <input type="password" name="password">
 	    </div>
+	    
 	    <button class="ui blue submit button">Login</button>
+	    
 	  </form>
   </div>
-  <div class="column">
-    <img src="/public/images/simpsons1.gif" class="ui large image">
-  </div>
+  
 </section>
+
+<div class="ui center aligned segment">
+  	Don't have a Account?<a href="/signup">  Sign Up</a>
+</div>
+
