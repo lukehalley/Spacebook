@@ -9,6 +9,7 @@ import javax.persistence.OneToMany;
 
 import play.db.jpa.Model;
 
+// Represents a user's post with content and timestamp
 @Entity
 public class Post extends Model
 {
