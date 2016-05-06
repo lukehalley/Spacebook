@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 
 import java.util.ArrayList;
+// User identification and profile information
 import java.util.List;
 
 import play.db.jpa.Model;
