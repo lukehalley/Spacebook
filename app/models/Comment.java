@@ -12,6 +12,7 @@ import play.db.jpa.Model;
 public class Comment extends Model {
 	@Lob
 	public String content;
+// Validate comment content and ensure non-empty messages
 // Validate comment length and content before saving
 	public Date postDate;
 
