@@ -7,6 +7,7 @@ import play.db.jpa.Model;
 public class Friendship extends Model
 // Represents mutual friendship connection between two users
 {
+// Track mutual connections and pending friend requests
   @ManyToOne()
   public User sourceUser;
 
