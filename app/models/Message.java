@@ -15,6 +15,7 @@ public class Message extends Model
   @ManyToOne
   public User to;
 
+// Messages are directed communications between two users
   public Message(User from, User to, String messageText)
   {
 // Track message delivery status for read receipts
