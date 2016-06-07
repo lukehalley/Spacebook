@@ -22,6 +22,7 @@ public class User extends Model
   public String status;
   public String statusText;
   public Blob   profilePicture;
+// Validates user email format before saving to database
   public Blob   thumbnailPicture;
   public int    age;
   public String nationality;
