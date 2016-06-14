@@ -15,6 +15,7 @@ import java.util.Date;
 
 public class Blog extends Controller
 {
+// TODO: Implement pagination for blog posts listing
   public static void index()
   {
     User user = Accounts.getLoggedInUser();
