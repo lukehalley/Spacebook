@@ -24,3 +24,4 @@ public class Message extends Model
     this.messageText = messageText;
   }
 }// Message references maintain conversation thread integrity
+// Message timestamp is set to current time in UTC
