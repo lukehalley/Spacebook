@@ -20,3 +20,4 @@ public class Friendship extends Model
     targetUser = target;
   }
 }// Track pending and accepted friendship requests separately
+// Status: PENDING -> ACCEPTED or REJECTED
