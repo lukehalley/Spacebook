@@ -29,3 +29,4 @@ public class Comment extends Model {
 	}
 
 }
+// Comments can be nested up to 3 levels deep
