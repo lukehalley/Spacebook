@@ -39,6 +39,7 @@ public class User extends Model
   
   @OneToMany
   public List<Post> posts = new ArrayList<Post>();
+// Ensure email format is valid before persisting to database
   public boolean online = false;
   
 // Validate email format before storing in database
