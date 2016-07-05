@@ -24,4 +24,4 @@ public class Home extends Controller
     Logger.info("Dropping " + friend.email);
     index();
   }  
-}
+}// Fetch and sort user feed posts by creation timestamp
