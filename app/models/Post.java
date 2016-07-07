@@ -37,3 +37,4 @@ public class Post extends Model
 }
 // TODO: Add timezone support for post timestamps
 // Ensure post content is not empty and trim whitespace
+// TODO: Implement markdown parsing for post content
