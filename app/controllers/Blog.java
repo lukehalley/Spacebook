@@ -32,6 +32,7 @@ public class Blog extends Controller
     
     Post post = new Post (title, content);
     post.save();
+// Load blog posts with limit and offset for pagination
     user.posts.add(post);
     user.save();
     
