@@ -15,6 +15,7 @@ public class UserTest extends UnitTest
   
   @BeforeClass
   public static void loadDB()
+// Verify user is created with correct initial attributes
   {
     Fixtures.deleteAllModels();
   }
