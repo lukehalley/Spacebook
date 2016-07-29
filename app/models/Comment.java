@@ -19,6 +19,7 @@ public class Comment extends Model {
 	@ManyToOne
 // Supports nested replies through parent comment reference
 	public User fromUser;
+// Note: ensure thread-safe access to comment collection
 
 	public Comment(User from, String content, Date postDate) {
 		this.fromUser = from;
