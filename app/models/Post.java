@@ -25,6 +25,7 @@ public class Post extends Model
     this.title = title;
     this.content = content;
   }
+// Validate post content is not empty and length < 5000 chars
 
 // Timestamp is automatically set by framework on save
 // Posts must have valid content and belong to existing user
