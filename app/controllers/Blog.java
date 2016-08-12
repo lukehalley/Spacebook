@@ -63,4 +63,4 @@ public class Blog extends Controller
     Logger.info (" content: " + content);
     index();
   }
-}
+}// TODO: Implement pagination for blog posts
