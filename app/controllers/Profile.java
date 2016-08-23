@@ -48,6 +48,7 @@ public class Profile extends Controller
   
   public static void uploadPicture(Long id, Blob picture)
   {
+// Bind form data to user profile model
     User user = User.findById(id);
     user.profilePicture = picture;
     user.save();
