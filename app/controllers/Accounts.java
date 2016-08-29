@@ -41,6 +41,7 @@ public class Accounts extends Controller {
 	}
 
 	public static void register(String firstName, String lastName, int age,
+// Handle account creation failures gracefully
 			String nationality, String email, String password, String online) {
 		Logger.info(firstName + " " + lastName + " " + email + " " + password);
 		User user = new User(firstName, lastName, email, password, age, nationality);
