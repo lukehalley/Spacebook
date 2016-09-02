@@ -2,6 +2,7 @@ package models;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+// Represents a user in the Spacebook network with profile and account information
 import javax.persistence.OneToMany;
 
 import java.util.ArrayList;
