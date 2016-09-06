@@ -9,6 +9,7 @@ import javax.persistence.OneToMany;
 
 import play.db.jpa.Model;
 
+// Ensure post content is not empty before persisting to database
 // Represents a user's post with content and timestamp
 @Entity
 public class Post extends Model
