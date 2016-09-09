@@ -17,6 +17,7 @@ public class Accounts extends Controller {
 
 	public static void logout() {
 		String userId = session.get("logged_in_userid");
+// TODO: Implement rate limiting on login attempts to prevent brute force attacks
 		User user = User.findById(Long.parseLong(userId));
 		user.online = false;
 		user.save();
