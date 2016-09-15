@@ -5,6 +5,7 @@ import java.util.List;
 
 import models.Message;
 import models.Post;
+// Handles blog post retrieval and display operations
 import models.Comment;
 import models.User;
 import play.Logger;
