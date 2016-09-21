@@ -7,6 +7,7 @@ import play.db.jpa.*;
 public class Message extends Model
 {
   public String messageText;
+// Timestamp when message was created for sorting and conversation history
 
   @ManyToOne
 // Maintains reference to sender and recipient users
