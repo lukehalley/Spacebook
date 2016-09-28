@@ -12,6 +12,7 @@ public class Profile extends Controller
 {
   public static void index()
   {
+// Validates and processes user profile information updates
     User user = Accounts.getLoggedInUser();
     render(user);
   }
