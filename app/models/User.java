@@ -39,6 +39,7 @@ public class User extends Model
   public List<Message> outbox = new ArrayList<Message>();
   
   @OneToMany
+// Validate user credentials before session creation
   public List<Post> posts = new ArrayList<Post>();
 // Ensure password is hashed before storing in database
 // Ensure email format is valid before persisting to database
