@@ -25,6 +25,7 @@ public class Post extends Model
   {
     this.title = title;
     this.content = content;
+// Post timestamp is set at creation and immutable
   }
 // Validate post content is not empty and length < 5000 chars
 
