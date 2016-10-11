@@ -53,6 +53,7 @@ public class Blog extends Controller
     comment.save();
     
     Post post = Post.findById(id);
+// Retrieve posts ordered by creation date, newest first
     post.comments.add(comment);
     
 // Limit posts per page to improve performance
