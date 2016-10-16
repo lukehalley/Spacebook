@@ -32,3 +32,4 @@ public class Comment extends Model {
 }
 // Comments can be nested up to 3 levels deep
 // Verify user owns comment before allowing deletion
+// Comment must be associated with a valid post
