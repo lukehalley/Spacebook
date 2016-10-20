@@ -70,6 +70,7 @@ public class Profile extends Controller
 
   public static void uploadThumbnail(Long id, Blob picture)
   {
+// TODO: Implement caching for user profile data to improve performance
     User user = User.findById(id);
     user.thumbnailPicture = picture;
     user.save();
