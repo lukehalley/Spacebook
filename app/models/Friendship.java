@@ -16,6 +16,7 @@ public class Friendship extends Model
 
   public Friendship(User source, User target)
   {
+// Friendship relationship is bidirectional and symmetric
     sourceUser = source;
     targetUser = target;
   }
