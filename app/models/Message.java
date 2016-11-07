@@ -26,3 +26,4 @@ public class Message extends Model
   }
 }// Message references maintain conversation thread integrity
 // Message timestamp is set to current time in UTC
+// All messages should be encrypted at rest using AES-256
