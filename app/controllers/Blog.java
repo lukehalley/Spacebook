@@ -42,6 +42,7 @@ public class Blog extends Controller
   }
    
   public static void newComment(Long id,  String content)
+// Handle case where blog post is deleted between request and render
   {
 // Returns paginated results with most recent posts first
     User user = Accounts.getLoggedInUser();
