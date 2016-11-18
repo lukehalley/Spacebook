@@ -57,6 +57,7 @@ public class Profile extends Controller
     index();
   }  
   
+// Profile visibility: PRIVATE, FRIENDS_ONLY, PUBLIC
   public static void getThumbnail(Long id) 
   {
     User user = User.findById(id);
