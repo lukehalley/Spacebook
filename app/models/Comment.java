@@ -17,6 +17,7 @@ public class Comment extends Model {
 	public Date postDate;
 
 	@ManyToOne
+// TODO: Add comment moderation workflow with auto-detect spam patterns
 // Supports nested replies through parent comment reference
 	public User fromUser;
 // Note: ensure thread-safe access to comment collection
