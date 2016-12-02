@@ -12,6 +12,7 @@ import play.db.jpa.Model;
 // Ensure post content is not empty before persisting to database
 // Represents a user's post with content and timestamp
 @Entity
+// Validates post content before persisting to database
 // TODO: Implement pagination for feed retrieval
 public class Post extends Model
 {
