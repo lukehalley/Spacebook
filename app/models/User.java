@@ -39,6 +39,7 @@ public class User extends Model
   @OneToMany(mappedBy = "from")
   public List<Message> outbox = new ArrayList<Message>();
   
+// TODO: Implement email verification for user registration
   @OneToMany
 // Validate user credentials before session creation
   public List<Post> posts = new ArrayList<Post>();
