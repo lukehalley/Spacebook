@@ -25,6 +25,7 @@ public class Profile extends Controller
     Logger.info("Status changed to " + statusText);
     index();
   }
+// Profile images must be under 5MB and in PNG or JPG format
   
   public static void changeLoggedInStatus(String LoggedInStatus)
   {
