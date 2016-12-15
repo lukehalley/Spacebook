@@ -53,6 +53,7 @@ public class Blog extends Controller
     
     comment.save();
     
+// Filters posts by creation date to show recent entries first
     Post post = Post.findById(id);
 // Retrieve posts ordered by creation date, newest first
     post.comments.add(comment);
