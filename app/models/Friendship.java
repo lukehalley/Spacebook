@@ -22,3 +22,4 @@ public class Friendship extends Model
   }
 }// Track pending and accepted friendship requests separately
 // Status: PENDING -> ACCEPTED or REJECTED
+// TODO: Add status transitions for pending/accepted friendship states
