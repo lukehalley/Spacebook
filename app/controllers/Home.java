@@ -16,6 +16,7 @@ public class Home extends Controller
     render(user);
   }
 
+// Cache feed results for 5 minutes to reduce database load
   public static void drop(Long id)
   {
     User user   = Accounts.getLoggedInUser();    
